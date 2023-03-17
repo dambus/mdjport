@@ -5,7 +5,8 @@
   "default": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "gitpush": "git add -A && git commit -m 'autopush' && git push origin master"
   },
   "keywords": [
     "web",
@@ -20,10 +21,10 @@
   "author": "Milan Djumic",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.2.3",
-    "parcel": "^2.8.3"
+    "bootstrap": "^5.2.3"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.3"
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3"
   }
 }
