@@ -1,6 +1,6 @@
 %btn {
   background-color: none;
-  color: $isabelline;
+  color: $ash-gray;
   border: none;
   cursor: pointer;
   display: flex;
@@ -9,7 +9,8 @@
 
   &:hover {
     // transform: scale(1.05);
-    background: $cf-blue;
+    background: $light-cyan;
+    color: black;
   }
 
   &:focus {

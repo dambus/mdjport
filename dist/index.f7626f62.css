@@ -14,11 +14,16 @@ html {
 
 body {
   min-height: calc(100vh - 8vw);
-  color: #f5f1ed;
-  background: #2c3e50;
+  color: #fff;
+  background: #202d3a;
   font-family: Source Sans Pro, sans-serif;
   font-weight: 300;
   line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .container {
@@ -27,7 +32,7 @@ body {
 
 .btn--small, .btn--small:link, .btn--small:visited, .btn {
   background-color: none;
-  color: #f5f1ed;
+  color: #9db5b2;
   cursor: pointer;
   border: none;
   align-items: center;
@@ -36,7 +41,8 @@ body {
 }
 
 .btn--small:hover, .btn:hover {
-  background: #7494ea;
+  color: #000;
+  background: #daf0ee;
 }
 
 .btn--small:focus, .btn:focus {
@@ -58,6 +64,56 @@ body {
   font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
+}
+
+.test-border {
+  border: 1px solid #fff;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+  margin: 0 auto !important;
+}
+
+.header__logo {
+  height: 4.6rem;
+  margin-left: 4rem;
+  display: block;
+}
+
+.header .nav .btn__nav {
+  width: auto;
+  background-color: none;
+  z-index: 11;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: inline-block;
+  position: relative;
+}
+
+.header .nav .btn__nav:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: all .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header .nav .btn__nav:hover {
+  background-color: none;
+  color: #9db5b2;
+}
+
+.header .nav .btn__nav:hover:before {
+  z-index: -1;
+  background-color: #daf0ee;
 }
 
 /*# sourceMappingURL=index.f7626f62.css.map */

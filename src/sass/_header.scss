@@ -1,0 +1,51 @@
+.test-border {
+  border: 1px solid white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto !important;
+  padding: 1rem;
+
+  &__logo {
+    margin-left: 4rem;
+    height: 4.6rem;
+    display: block;
+  }
+  .nav {
+    .btn__nav {
+      // @extend %btn;
+
+      position: relative;
+      width: auto;
+      display: inline-block;
+      background-color: none;
+      padding: 1rem;
+      font-size: 1.25rem;
+      font-weight: 400;
+      z-index: 11;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all 0.3s;
+        z-index: -1;
+      }
+
+      &:hover {
+        background-color: none;
+        color: $ash-gray;
+        &::before {
+          background-color: $light-cyan;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
