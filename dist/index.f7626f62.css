@@ -88,9 +88,10 @@ a {
   width: auto;
   background-color: none;
   z-index: 11;
-  padding: 1rem;
-  font-size: 1.25rem;
+  padding: .75rem 1.25rem;
+  font-size: 1.15rem;
   font-weight: 400;
+  transition: all .2s;
   display: inline-block;
   position: relative;
 }
@@ -100,7 +101,7 @@ a {
   height: 100%;
   width: 100%;
   z-index: -1;
-  transition: all .3s;
+  transition: all .5s ease-in;
   position: absolute;
   top: 0;
   left: 0;
@@ -108,12 +109,14 @@ a {
 
 .header .nav .btn__nav:hover {
   background-color: none;
-  color: #9db5b2;
+  color: #000;
 }
 
 .header .nav .btn__nav:hover:before {
   z-index: -1;
   background-color: #daf0ee;
+  transition: all .6s;
+  transform: rotate(-2deg);
 }
 
 /*# sourceMappingURL=index.f7626f62.css.map */
