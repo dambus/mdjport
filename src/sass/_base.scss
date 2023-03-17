@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700;900&display=swap");
+
+$font-main: "Source Sans Pro", sans-serif;
+
+/* SCSS HEX */
+$isabelline: #f5f1edff;
+$persian-green: #549f93ff;
+$orange-peel: #ff9f1cff;
+$cf-blue: #7494eaff;
+$charcoal: #2c3e50ff;
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(
+  0deg,
+  #f5f1edff,
+  #549f93ff,
+  #ff9f1cff,
+  #7494eaff,
+  #2c3e50ff
+);
+$gradient-right: linear-gradient(
+  90deg,
+  #f5f1edff,
+  #549f93ff,
+  #ff9f1cff,
+  #7494eaff,
+  #2c3e50ff
+);
+$gradient-bottom: linear-gradient(
+  180deg,
+  #f5f1edff,
+  #549f93ff,
+  #ff9f1cff,
+  #7494eaff,
+  #2c3e50ff
+);
+$gradient-left: linear-gradient(
+  270deg,
+  #f5f1edff,
+  #549f93ff,
+  #ff9f1cff,
+  #7494eaff,
+  #2c3e50ff
+);
+$gradient-top-right: linear-gradient(
+  45deg,
+  #f5f1edff,
+  #549f93ff,
+  #ff9f1cff,
+  #7494eaff,
+  #2c3e50ff
+);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #f5f1edff,
+  #549f93ff,
+  #ff9f1cff,
+  #7494eaff,
+  #2c3e50ff
+);
+$gradient-top-left: linear-gradient(
+  225deg,
+  #f5f1edff,
+  #549f93ff,
+  #ff9f1cff,
+  #7494eaff,
+  #2c3e50ff
+);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #f5f1edff,
+  #549f93ff,
+  #ff9f1cff,
+  #7494eaff,
+  #2c3e50ff
+);
+$gradient-radial: radial-gradient(
+  #f5f1edff,
+  #549f93ff,
+  #ff9f1cff,
+  #7494eaff,
+  #2c3e50ff
+);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  // font-size: 62.5%;
+}
+
+body {
+  min-height: calc(100vh - 2 * 4vw);
+  background: $charcoal;
+  color: $isabelline;
+  font-family: $font-main;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.container {
+  margin: 4vw auto;
+}

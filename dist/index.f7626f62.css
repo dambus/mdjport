@@ -1,0 +1,63 @@
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700;900&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: calc(100vh - 8vw);
+  color: #f5f1ed;
+  background: #2c3e50;
+  font-family: Source Sans Pro, sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.container {
+  margin: 4vw auto;
+}
+
+.btn--small, .btn--small:link, .btn--small:visited, .btn {
+  background-color: none;
+  color: #f5f1ed;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  transition: all .2s;
+  display: flex;
+}
+
+.btn--small:hover, .btn:hover {
+  background: #7494ea;
+}
+
+.btn--small:focus, .btn:focus {
+  outline: none;
+}
+
+.btn--small > :first-child, .btn > :first-child {
+  margin-right: 1rem;
+}
+
+.btn {
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.btn--small, .btn--small:link, .btn--small:visited {
+  padding: 1.25rem 2.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=index.f7626f62.css.map */
