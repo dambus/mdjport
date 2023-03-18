@@ -88,7 +88,8 @@ a {
   width: auto;
   background-color: none;
   z-index: 11;
-  padding: .75rem 1.25rem;
+  margin-right: .66rem;
+  padding: .66rem 1.25rem;
   font-size: 1.15rem;
   font-weight: 400;
   transition: all .2s;
@@ -101,7 +102,7 @@ a {
   height: 100%;
   width: 100%;
   z-index: -1;
-  transition: all .5s ease-in;
+  transition: all .4s ease-in;
   position: absolute;
   top: 0;
   left: 0;
@@ -110,13 +111,47 @@ a {
 .header .nav .btn__nav:hover {
   background-color: none;
   color: #000;
+  transform: rotate(-2deg);
 }
 
 .header .nav .btn__nav:hover:before {
   z-index: -1;
   background-color: #daf0ee;
-  transition: all .6s;
+  border-radius: 6px;
+  transition: all .5s;
   transform: rotate(-2deg);
+}
+
+.container__heading, .heading__image {
+  min-height: calc(100vh - 8vw);
+}
+
+.heading__image--container {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.heading__image--image {
+  max-width: 90%;
+}
+
+.heading__title {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+.heading__title--title {
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.heading__title--subtitle {
+  flex-shrink: 0;
 }
 
 /*# sourceMappingURL=index.f7626f62.css.map */
