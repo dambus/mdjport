@@ -1,5 +1,10 @@
 .container__heading {
   min-height: calc(100vh - 2 * 4vw);
+
+  @include md {
+  }
+  @include lg {
+  }
 }
 
 .heading__image {
