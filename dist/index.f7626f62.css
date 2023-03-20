@@ -80,8 +80,24 @@ a {
 
 .header__logo {
   height: 4.6rem;
-  margin-left: 4rem;
+  margin: 0 auto;
   display: block;
+}
+
+@media (min-width: 768px) {
+  .header__logo {
+    margin-left: 4rem;
+  }
+}
+
+.header .nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header .nav {
+    display: block;
+  }
 }
 
 .header .nav .btn__nav {
@@ -122,8 +138,63 @@ a {
   transform: rotate(-2deg);
 }
 
-.container__heading, .heading__image {
+.header .nav__mobile {
+  height: 3rem;
+  background-color: #9db5b2a8;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .header .nav__mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .header .nav__mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header .nav__mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header .nav__mobile {
+    display: none;
+  }
+}
+
+.header .nav__mobile--menu-icon {
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.container__heading {
   min-height: calc(100vh - 8vw);
+}
+
+.heading__image {
+  min-height: 40vh;
+}
+
+@media (min-width: 768px) {
+  .heading__image {
+    min-height: calc(100vh - 8vw);
+  }
 }
 
 .heading__image--container {
@@ -139,19 +210,47 @@ a {
 }
 
 .heading__title {
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  display: flex;
+  display: block;
 }
 
 .heading__title--title {
-  flex-wrap: nowrap;
-  flex-shrink: 0;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .heading__title--subtitle {
-  flex-shrink: 0;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .heading__title {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .heading__title--title {
+    text-align: start;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    font-size: 3rem;
+  }
+
+  .heading__title--subtitle {
+    text-align: start;
+    flex-shrink: 0;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=index.f7626f62.css.map */

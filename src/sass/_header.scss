@@ -10,11 +10,19 @@
   padding: 1rem;
 
   &__logo {
-    margin-left: 4rem;
+    @include md {
+      margin-left: 4rem;
+    }
+    margin: 0 auto;
     height: 4.6rem;
     display: block;
   }
   .nav {
+    display: none;
+    @include md {
+      display: block;
+    }
+
     .btn__nav {
       // @extend %btn;
 
@@ -52,6 +60,38 @@
           transition: all 0.5s;
         }
       }
+    }
+  }
+  .nav__mobile {
+    @include md {
+      display: none;
+    }
+    @include lg {
+      display: none;
+    }
+    @include xl {
+      display: none;
+    }
+
+    @include rwd(1400px) {
+      display: none;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 3rem;
+    background-color: rgba($ash-gray, 0.66);
+    &--menu-icon {
+      border: 1px solid white;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
