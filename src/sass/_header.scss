@@ -2,16 +2,31 @@
   border: 1px solid white;
 }
 
+.mobile-nav--items {
+  display: block;
+  opacity: 0.95;
+  transform: translateX(0);
+  position: absolute;
+  z-index: 99;
+  top: 9rem;
+  width: 100%;
+  right: 0%;
+  height: calc(100vh - 14rem);
+  background: $ash-gray;
+  transition: all 0.5s;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto !important;
+  margin: 2rem auto !important;
   padding: 1rem;
 
   &__logo {
     @include md {
       margin-left: 4rem;
+      margin-top: 0;
     }
     margin: 0 auto;
     height: 4.6rem;
@@ -81,17 +96,64 @@
     align-items: center;
     position: fixed;
     left: 0;
-    bottom: 0;
-    height: 3rem;
-    background-color: rgba($ash-gray, 0.66);
+    bottom: 10px;
+    // height: 3rem;
+    background-color: transparent;
     &--menu-icon {
-      border: 1px solid white;
-      height: 2rem;
-      width: 2rem;
-      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      .toggle-menu {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+        display: flex;
+        background-color: $ash-gray;
+        justify-content: center;
+        border-radius: 14px;
+        align-items: center;
+        cursor: pointer;
+        overflow: hidden;
+
+        span {
+          position: absolute;
+          width: 35px;
+          height: 4px;
+          background: $gunmetal;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: 0.5s;
+
+          &:nth-child(1) {
+            transform: translateY(-8px);
+            width: 25px;
+            left: 8px;
+          }
+
+          &:nth-child(2) {
+            transform: translateY(8px);
+            width: 20px;
+            left: 8px;
+          }
+        }
+      }
+      .active {
+        span:nth-child(3) {
+          transform: translateX(60px);
+        }
+        span:nth-child(1) {
+          width: 35px;
+          transform: translateX(0px) rotate(-45deg);
+          height: 3px;
+        }
+        span:nth-child(2) {
+          transform: translateX(0px) rotate(45deg);
+          width: 35px;
+          height: 3px;
+        }
+      }
     }
   }
 }

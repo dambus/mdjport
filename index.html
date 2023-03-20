@@ -11,14 +11,23 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/sass/main.scss" />
-
+    <script defer src="./src/js/main.js"></script>
     <title>milan djumic::portfolio</title>
   </head>
   <body>
+    <div
+      class="container-fluid mobile-nav--items hidden no-opacity from-right"
+    ></div>
     <div class="header container-fluid">
       <img src="src/img/mdjlogo.png" alt="logo" class="header__logo" />
       <div class="nav__mobile container-fluid">
-        <div class="nav__mobile--menu-icon">M</div>
+        <div class="nav__mobile--menu-icon">
+          <div class="toggle-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
 
       <div class="nav">

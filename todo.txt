@@ -1,0 +1,15 @@
+header
+  -spustiti logo u sm da ne bude zalepljen za vrh ekrana ✅
+  
+  navigation
+
+  navigation mobile
+    - pronaci zanimljivu ikonicu za menu button 
+    - napraviti ikonice za linkove
+      - fullscreen? areial menu?
+    
+heading
+  - ubaciti ikonicu za view my work
+    - optimizovati poziciju za sm> 
+  - editovati ilustraciju
+    - mozda neka animacija pri prvom loadovanju? 
