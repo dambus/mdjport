@@ -1,0 +1,22 @@
+.articles {
+  display: flex;
+  flex-direction: column;
+  @include lg {
+    // flex-direction: row;
+  }
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  @include md {
+    // padding: 3rem;
+    flex-grow: 1;
+  }
+  img {
+    max-width: 100%;
+    @include md {
+      max-width: 100%;
+    }
+  }
+}

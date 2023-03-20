@@ -112,10 +112,6 @@ a {
   color: inherit;
 }
 
-.container {
-  margin: 4vw auto;
-}
-
 // BREAKPOINTS
 $screen-sm-min: 576px;
 $screen-md-min: 768px;
@@ -156,3 +152,35 @@ $screen-xl-min: 1200px;
     @content;
   }
 }
+
+.section__heading {
+  display: flex;
+  justify-content: center;
+}
+
+.section__content {
+  margin-top: 2rem;
+}
+
+section {
+  min-height: calc(100vh - 7rem);
+}
+
+article {
+  margin: 5vh auto;
+}
+
+.container {
+  margin: 4vw auto;
+  max-width: 90%;
+  @include md {
+    max-width: 76%;
+  }
+}
+
+.f-break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+$spacer: 5rem;
