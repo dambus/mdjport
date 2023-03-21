@@ -46,7 +46,9 @@
     margin: 0 auto;
     font-size: 2rem;
     @include md {
-      font-size: clamp(1rem, 0.3312rem + 3.0573vw, 4rem);
+      // font-size: clamp(1rem, 0.3312rem + 3.0573vw, 4rem);
+      // font-size: clamp(1.5rem, 1rem + 1.0417vw, 2.25rem);
+      font-size: clamp(2rem, 1.6667rem + 0.6944vw, 2.5rem);
       flex-shrink: 0;
       text-align: start;
       flex-wrap: nowrap;
@@ -61,7 +63,10 @@
     font-size: 1.2rem;
     font-weight: 300;
     @include md {
-      font-size: clamp(0.8125rem, 0.3248rem + 2.2293vw, 3rem);
+      // font-size: clamp(0.8125rem, 0.3248rem + 2.2293vw, 3rem);
+      // font-size: clamp(1.125rem, 0.875rem + 0.5208vw, 1.5rem);
+      // font-size: clamp(1.5rem, 1.1667rem + 0.6944vw, 2rem);
+      font-size: clamp(1.125rem, 0.875rem + 0.5208vw, 1.5rem);
       margin-top: 1rem;
       flex-shrink: 0;
       font-weight: 300;

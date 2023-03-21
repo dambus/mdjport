@@ -60,6 +60,7 @@ a.mobile-nav-items--item {
   }
   .nav {
     display: none;
+    margin-right: 4rem;
     @include md {
       display: block;
     }

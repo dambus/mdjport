@@ -28,4 +28,5 @@ SHOWCASE
 SKILLS
   - smisliti novi tekst
   - interaktivne ikone?
-  
+    - mozda svaki "skill" ikona da ima svoj story? Popup? Modal?
+
