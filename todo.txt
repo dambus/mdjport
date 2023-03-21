@@ -4,12 +4,28 @@ header
   navigation
 
   navigation mobile
-    - pronaci zanimljivu ikonicu za menu button 
+    - pronaci zanimljivu ikonicu za menu button ✅
     - napraviti ikonice za linkove
-      - fullscreen? areial menu?
+      - fullscreen? areial menu? fullscreen ✅
+      - dodati ikone za meni, on hover? perma?
+      - resiti problem za #heading scroll to da ima marginu, a ne da bude zalepljen za vrh ekrana
     
 heading
   - ubaciti ikonicu za view my work
-    - optimizovati poziciju za sm> 
+    - optimizovati poziciju za sm>  ✅
   - editovati ilustraciju
     - mozda neka animacija pri prvom loadovanju? 
+
+SHOWCASE
+  - povecati gap u md> velicini, 2 po liniji
+  - ikonice za used tech
+  - UI za otvaranje showcase-a i stvarni link
+  - ubaciti slike
+  - napraviti modal za showcase
+    - content za svaki projekat
+      - istraziti da li praviti kao html za svaki projekat ili kao json pa ucitavati svaki posebno
+
+SKILLS
+  - smisliti novi tekst
+  - interaktivne ikone?
+  
