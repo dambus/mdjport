@@ -2,12 +2,14 @@ header
   -spustiti logo u sm da ne bude zalepljen za vrh ekrana ✅
   
   navigation
+    - sticky kada se dodje do sekcije work
+    - videti kako utice na naslov, iskombinovati 
 
   navigation mobile
     - pronaci zanimljivu ikonicu za menu button ✅
-    - napraviti ikonice za linkove
+    - napraviti ikonice za linkove ✅
       - fullscreen? areial menu? fullscreen ✅
-      - dodati ikone za meni, on hover? perma?
+      - dodati ikone za meni, on hover? perma? ✅
       - resiti problem za #heading scroll to da ima marginu, a ne da bude zalepljen za vrh ekrana
     
 heading
@@ -30,3 +32,10 @@ SKILLS
   - interaktivne ikone?
     - mozda svaki "skill" ikona da ima svoj story? Popup? Modal?
 
+ABOUT ME
+  - centrirati img na sm
+  - napraviti btns za read more, contact
+
+QUICKLINKS
+  - dodati quick links sidebar lefo
+  - napraviti poseban link u mobile nav da iskoce quick links

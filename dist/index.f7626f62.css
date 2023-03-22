@@ -163,6 +163,13 @@ article {
   display: flex;
 }
 
+.mobile-nav-items--icon {
+  height: 1rem;
+  width: 1rem;
+  margin-top: -.5rem;
+  margin-right: 2rem;
+}
+
 a.mobile-nav-items--item {
   color: #202d3a;
   border-top: 1px solid #202d3a1a;
