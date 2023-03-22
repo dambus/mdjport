@@ -485,14 +485,61 @@ img.mobile-nav-items--logo {
 
 .skills__box--skill-icon {
   flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
   padding: 0 1rem;
   font-size: 4rem;
+  display: flex;
+  position: relative;
 }
 
 @media (min-width: 768px) {
   .skills__box--skill-icon {
     font-size: 6rem;
   }
+}
+
+.badge_learning, .badge_ok, .badge_good {
+  color: #fff;
+  border-radius: 6px;
+  padding: 2% 6%;
+  font-size: 20%;
+  font-weight: 400;
+  position: absolute;
+  top: -20%;
+  right: 15%;
+  transform: rotate(10deg);
+}
+
+@media (min-width: 768px) {
+  .badge_learning, .badge_ok, .badge_good {
+    right: 5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .badge_learning, .badge_ok, .badge_good {
+    right: 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .badge_learning, .badge_ok, .badge_good {
+    right: 15%;
+  }
+}
+
+.badge_good {
+  background-color: green;
+}
+
+.badge_ok {
+  background-color: #6b8e23;
+}
+
+.badge_learning {
+  background-color: #9acd32;
 }
 
 /*# sourceMappingURL=index.f7626f62.css.map */
