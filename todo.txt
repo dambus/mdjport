@@ -17,7 +17,7 @@ heading
     - mozda neka animacija pri prvom loadovanju? 
 
 SHOWCASE
-  - povecati gap u md> velicini, 2 po liniji
+  - povecati gap u md> velicini, 2 po liniji *** napraviti rework da md> bude jedan po liniji ali flex row pa da stoji horizontalno ili nesto slicno pomocu js
   - ikonice za used tech
   - UI za otvaranje showcase-a i stvarni link
   - ubaciti slike

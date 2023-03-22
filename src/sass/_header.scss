@@ -9,10 +9,10 @@
   transform: translateX(0);
   position: fixed;
   z-index: 99;
-  top: 9rem;
+  top: 0;
   width: 100%;
   right: 0%;
-  height: calc(100vh - 14rem);
+  height: calc(100vh - 70px);
   background: $ash-gray;
   transition: all 0.5s;
 
@@ -35,11 +35,18 @@ a.mobile-nav-items--item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  // width: 100%;
   // transform: translateX(300px);
-  flex: 25%;
+  flex: 20%;
   transition: all 0.3s;
+  &:first-child {
+  }
   // height: 5rem;
+}
+
+img.mobile-nav-items--logo {
+  width: 30%;
+  margin: 2rem auto;
 }
 
 .header {
@@ -123,9 +130,10 @@ a.mobile-nav-items--item {
     align-items: center;
     position: fixed;
     left: 0;
-    bottom: 10px;
+    bottom: 0px;
+    z-index: 999;
     // height: 3rem;
-    background-color: transparent;
+    background-color: rgba($gunmetal, 0.95);
     &--menu-icon {
       display: flex;
       align-items: center;
@@ -135,6 +143,7 @@ a.mobile-nav-items--item {
         position: relative;
         width: 50px;
         height: 50px;
+        margin: 10px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
         display: flex;
         background-color: $ash-gray;

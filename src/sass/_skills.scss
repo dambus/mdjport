@@ -1,0 +1,20 @@
+.skills__box {
+  margin-top: 8vw;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  @include md {
+    justify-content: flex-start;
+  }
+  &--skill-icon {
+    padding: 0rem 1rem;
+    font-size: 4rem;
+    flex-grow: 1;
+    @include md {
+      font-size: 6rem;
+    }
+  }
+}
