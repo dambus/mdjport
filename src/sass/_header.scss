@@ -44,8 +44,8 @@ a.mobile-nav-items--item {
   // transform: translateX(300px);
   flex: 20%;
   transition: all 0.3s;
-  &:first-child {
-  }
+  // &:first-child {
+  // }
   // height: 5rem;
 }
 
@@ -55,6 +55,9 @@ img.mobile-nav-items--logo {
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;

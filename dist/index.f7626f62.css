@@ -192,6 +192,9 @@ img.mobile-nav-items--logo {
   align-items: center;
   padding: 1rem;
   display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
   margin: 2rem auto !important;
 }
 
@@ -447,6 +450,18 @@ img.mobile-nav-items--logo {
 .from-right {
   transition: all .5s;
   transform: translateX(-300px);
+}
+
+.sticky {
+  position: sticky;
+}
+
+.relative {
+  position: relative;
+}
+
+.active {
+  color: red;
 }
 
 .articles {
