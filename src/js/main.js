@@ -5,10 +5,9 @@ const mobileMenuToggle = document.querySelector(".toggle-menu");
 const mobileNavItems = document.querySelector(".mobile-nav-items");
 const mobileNavItem = document.querySelectorAll(".mobile-nav-items--item");
 const navBar = document.querySelector(".header");
-// let navBarPosition = navBar.getBoundingClientRect().top;
+let navBarHeight = navBar.getBoundingClientRect().height;
 const navBarLinks = document.querySelectorAll(".nav a");
-// let scrollPosition = window.scrollY;
-// let vHeight = window.innerHeight - 120;
+const logo = document.querySelector(".header__logo");
 
 const toggleCSSClasses = (el, ...cls) =>
   cls.map((cl) => el.classList.toggle(cl));
@@ -20,7 +19,7 @@ mobileNavItem.forEach(function (currentValue, currentIndex, listObj) {
 });
 
 mobileMenuToggle.addEventListener("click", function () {
-  mobileMenuToggle.classList.toggle("active");
+  mobileMenuToggle.classList.toggle("mob-active");
   toggleCSSClasses(mobileNavItems, "hidden", "no-opacity");
   // toggleCSSClasses([...mobileNavItem], "from-right");
   // console.log(mobileNavItem);
@@ -40,28 +39,43 @@ navBarLinks.forEach((link) => {
   });
 });
 
-const makeActiveNav = (entries, observer) => {
-  entries.forEach((entry) => {
-    // if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
-    if (entry.isIntersecting) {
-      // toggle active class
-      let id = entry.target.getAttribute("id");
-      console.log(id);
-      console.log(entry);
-      let allActiveLinks = document.querySelector(".active");
-      allActiveLinks.classList.remove("active");
-      console.log(allActiveLinks);
-      let newLink = document.querySelector(`[href='#${id}']`);
-      console.log(newLink);
-      newLink.classList.toggle("active");
+// Get all sections that have an ID defined
+const sections = document.querySelectorAll("section[id]");
+
+// Add an event listener listening for scroll
+const scrollFunctions = [navHighlighter, navBarChanger];
+
+window.addEventListener("scroll", navHighlighter);
+window.addEventListener("scroll", navBarChanger);
+
+function navBarChanger() {
+  scrollY > navBarHeight ? (logo.widht = 100) : (logo.widht = 225);
+  // ? logo.classList.add("small")
+  // : logo.classList.remove("small");
+}
+
+function navHighlighter() {
+  // Get current scroll position
+  // let scrollY = window.pageYOffset;
+
+  // Now we loop through sections to get height, top and ID values for each
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 250;
+    let sectionId = current.getAttribute("id");
+
+    /*
+    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    */
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector("a[href*=" + sectionId + "]")
+        .classList.add("active");
+    } else {
+      document
+        .querySelector("a[href*=" + sectionId + "]")
+        .classList.remove("active");
     }
   });
-};
-
-const options = { treshold: 0.55, rootMargin: "-200px" };
-const observer = new IntersectionObserver(makeActiveNav, options);
-const sections = document.querySelectorAll("section");
-sections.forEach((section) => {
-  // console.log(section);
-  observer.observe(section);
-});
+}

@@ -55,7 +55,6 @@ img.mobile-nav-items--logo {
 }
 
 .header {
-  position: sticky;
   top: 0;
   left: 0;
   display: flex;
@@ -63,11 +62,20 @@ img.mobile-nav-items--logo {
   justify-content: space-between;
   margin: 2rem auto !important;
   padding: 1rem;
+  background-color: $gunmetal;
+  border: none;
+  @include md {
+    position: sticky;
+    z-index: 999;
+  }
 
   &__logo {
     @include md {
       margin-left: 4rem;
       margin-top: 0;
+      .small {
+        width: 1rem;
+      }
     }
     margin: 0 auto;
     height: 4.6rem;
@@ -183,7 +191,7 @@ img.mobile-nav-items--logo {
           }
         }
       }
-      .active {
+      .mob-active {
         span:nth-child(3) {
           transform: translateX(60px);
         }
