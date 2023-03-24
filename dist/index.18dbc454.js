@@ -558,7 +558,7 @@ function hmrAccept(bundle, id) {
 
 },{}],"1SICI":[function(require,module,exports) {
 "use strict";
-const { entries  } = require("3c8109aaedb5ae7f");
+const { entries  } = require("93b102c94680bc6");
 const mobileMenuToggle = document.querySelector(".toggle-menu");
 const mobileNavItems = document.querySelector(".mobile-nav-items");
 const mobileNavItem = document.querySelectorAll(".mobile-nav-items--item");
@@ -586,6 +586,7 @@ navBarLinks.forEach((link)=>{
         event.preventDefault();
         let target = document.querySelector(event.target.hash);
         target.scrollIntoView({
+            top: 100,
             behavior: "smooth",
             block: "start"
         });
@@ -594,14 +595,10 @@ navBarLinks.forEach((link)=>{
 // Get all sections that have an ID defined
 const sections = document.querySelectorAll("section[id]");
 // Add an event listener listening for scroll
-const scrollFunctions = [
-    navHighlighter,
-    navBarChanger
-];
 window.addEventListener("scroll", navHighlighter);
-window.addEventListener("scroll", navBarChanger);
+// window.addEventListener("scroll", navBarChanger);
 function navBarChanger() {
-    scrollY > navBarHeight ? logo.widht = 100 : logo.widht = 225;
+// scrollY > navBarHeight ? (logo.widht = 100) : (logo.widht = 225);
 // ? logo.classList.add("small")
 // : logo.classList.remove("small");
 }
@@ -611,17 +608,21 @@ function navHighlighter() {
     // Now we loop through sections to get height, top and ID values for each
     sections.forEach((current)=>{
         const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 250;
+        const sectionTop = current.offsetTop - 360;
         let sectionId = current.getAttribute("id");
+        // console.log(sectionId);
         /*
     - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
     - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-    */ if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) document.querySelector("a[href*=" + sectionId + "]").classList.add("active");
-        else document.querySelector("a[href*=" + sectionId + "]").classList.remove("active");
+    */ if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) // document
+        //   .querySelector("a[href*=" + sectionId + "]")
+        //   .classList.add("active");
+        document.querySelector(`[data-anchor="#${sectionId}"]`).classList.add("active");
+        else document.querySelector(`[data-anchor="#${sectionId}"]`).classList.remove("active");
     });
 }
 
-},{"3c8109aaedb5ae7f":"3qBDj"}],"3qBDj":[function(require,module,exports) {
+},{"93b102c94680bc6":"3qBDj"}],"3qBDj":[function(require,module,exports) {
 var global = arguments[3];
 (function() {
     /** Used as a safe reference for `undefined` in pre-ES5 environments. */ var undefined;

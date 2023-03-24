@@ -33,6 +33,7 @@ navBarLinks.forEach((link) => {
     event.preventDefault();
     let target = document.querySelector(event.target.hash);
     target.scrollIntoView({
+      top: 100,
       behavior: "smooth",
       block: "start",
     });
@@ -43,13 +44,12 @@ navBarLinks.forEach((link) => {
 const sections = document.querySelectorAll("section[id]");
 
 // Add an event listener listening for scroll
-const scrollFunctions = [navHighlighter, navBarChanger];
 
 window.addEventListener("scroll", navHighlighter);
-window.addEventListener("scroll", navBarChanger);
+// window.addEventListener("scroll", navBarChanger);
 
 function navBarChanger() {
-  scrollY > navBarHeight ? (logo.widht = 100) : (logo.widht = 225);
+  // scrollY > navBarHeight ? (logo.widht = 100) : (logo.widht = 225);
   // ? logo.classList.add("small")
   // : logo.classList.remove("small");
 }
@@ -61,20 +61,24 @@ function navHighlighter() {
   // Now we loop through sections to get height, top and ID values for each
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 250;
+    const sectionTop = current.offsetTop - 360;
     let sectionId = current.getAttribute("id");
+    // console.log(sectionId);
 
     /*
     - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
     - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
     */
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      // document
+      //   .querySelector("a[href*=" + sectionId + "]")
+      //   .classList.add("active");
       document
-        .querySelector("a[href*=" + sectionId + "]")
+        .querySelector(`[data-anchor="#${sectionId}"]`)
         .classList.add("active");
     } else {
       document
-        .querySelector("a[href*=" + sectionId + "]")
+        .querySelector(`[data-anchor="#${sectionId}"]`)
         .classList.remove("active");
     }
   });

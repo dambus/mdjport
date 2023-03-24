@@ -2,7 +2,7 @@ header
   -spustiti logo u sm da ne bude zalepljen za vrh ekrana ✅
   
   navigation
-    - sticky kada se dodje do sekcije work
+    - sticky kada se dodje do sekcije work ✅
     - videti kako utice na naslov, iskombinovati 
 
   navigation mobile
@@ -10,10 +10,10 @@ header
     - napraviti ikonice za linkove ✅
       - fullscreen? areial menu? fullscreen ✅
       - dodati ikone za meni, on hover? perma? ✅
-      - resiti problem za #heading scroll to da ima marginu, a ne da bude zalepljen za vrh ekrana
+      - resiti problem za #heading scroll to da ima marginu, a ne da bude zalepljen za vrh ekrana ✅
     
 heading
-  - ubaciti ikonicu za view my work
+  - ubaciti ikonicu za view my work ✅
     - optimizovati poziciju za sm>  ✅
   - editovati ilustraciju
     - mozda neka animacija pri prvom loadovanju? 
@@ -37,5 +37,5 @@ ABOUT ME
   - napraviti btns za read more, contact
 
 QUICKLINKS
-  - dodati quick links sidebar lefo
+  - dodati quick links sidebar left
   - napraviti poseban link u mobile nav da iskoce quick links
