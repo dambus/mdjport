@@ -20,7 +20,7 @@ heading
 
 SHOWCASE
   - povecati gap u md> velicini, 2 po liniji *** napraviti rework da md> bude jedan po liniji ali flex row pa da stoji horizontalno ili nesto slicno pomocu js
-  - ikonice za used tech
+  - ikonice za used tech ✅
   - UI za otvaranje showcase-a i stvarni link
   - ubaciti slike
   - napraviti modal za showcase

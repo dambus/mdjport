@@ -8,6 +8,7 @@ const navBar = document.querySelector(".header");
 let navBarHeight = navBar.getBoundingClientRect().height;
 const navBarLinks = document.querySelectorAll(".nav a");
 const logo = document.querySelector(".header__logo");
+const showCases = document.querySelectorAll(".showcase__imageholder");
 
 const toggleCSSClasses = (el, ...cls) =>
   cls.map((cl) => el.classList.toggle(cl));
