@@ -1,0 +1,94 @@
+.card {
+  color: $white;
+  outline: none;
+  border: none;
+  // background-image: url(/src/img/tigran-hambardzumyan-h1wOnkASqq4-unsplash.jpg);
+  background-size: cover;
+  padding: 10rem 0 0;
+  max-width: 80ch;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 500ms ease;
+
+  &-content {
+    $padding: 1.5rem;
+    padding: $padding;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.7) 30%,
+      rgba(0, 0, 0, 1)
+    );
+    @media (hover) {
+      transform: translateY(65%);
+    }
+    transition: transform 0.5s ease;
+
+    & > *:not(.card-title) {
+      @media (hover) {
+        opacity: 0;
+      }
+    }
+  }
+  &-title {
+    $padding: 1.5rem;
+    position: relative;
+    width: max-content;
+    padding-bottom: calc($padding / 2);
+    &::after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      width: calc(100% + $padding);
+      left: calc($padding * -1);
+      bottom: 0;
+      background: $tiffany-blue;
+      @media (hover) {
+        transform: scaleX(0);
+      }
+      transform-origin: left;
+      transition: transform 0.5s ease;
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    transform: scale(1.02);
+    .card-title::after {
+      transform: scaleX(1);
+    }
+    .card-content {
+      transform: translatey(1%);
+      transition-delay: 500ms;
+      transition-duration: 0ms;
+      & > *:not(.card-title) {
+        opacity: 1;
+        transition: opacity 0.75s linear;
+        transition-delay: 0.75s;
+      }
+    }
+  }
+  // &:hover,
+  // &:focus-within {
+  //   transform: scale(1.05);
+
+  // }
+}
+
+p.card-body {
+  margin: 1rem 0;
+  font-weight: 300;
+}
+
+.mybutton {
+  cursor: pointer;
+  display: inline;
+  text-decoration: none;
+  color: $gunmetal;
+  background-color: $tiffany-blue;
+  padding: 0.5em 1.25em;
+  border-radius: 0.25em;
+  &:hover,
+  &:focus {
+    background-color: $white;
+  }
+}

@@ -700,4 +700,94 @@ img.mobile-nav-items--logo {
   background-color: #9acd32;
 }
 
+.card {
+  color: #fff;
+  max-width: 80ch;
+  background-size: cover;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  padding: 10rem 0 0;
+  transition: transform .5s;
+  overflow: hidden;
+}
+
+.card-content {
+  background: linear-gradient(#0000, #000000b3 30%, #000);
+  padding: 1.5rem;
+  transition: transform .5s;
+}
+
+@media (hover) {
+  .card-content {
+    transform: translateY(65%);
+  }
+
+  .card-content > :not(.card-title) {
+    opacity: 0;
+  }
+}
+
+.card-title {
+  width: max-content;
+  padding-bottom: .75rem;
+  position: relative;
+}
+
+.card-title:after {
+  content: "";
+  height: 4px;
+  width: calc(100% + 1.5rem);
+  transform-origin: 0;
+  background: #94d1be;
+  transition: transform .5s;
+  position: absolute;
+  bottom: 0;
+  left: -1.5rem;
+}
+
+@media (hover) {
+  .card-title:after {
+    transform: scaleX(0);
+  }
+}
+
+.card:hover, .card:focus-within {
+  transform: scale(1.02);
+}
+
+.card:hover .card-title:after, .card:focus-within .card-title:after {
+  transform: scaleX(1);
+}
+
+.card:hover .card-content, .card:focus-within .card-content {
+  transition-duration: 0s;
+  transition-delay: .5s;
+  transform: translateY(1%);
+}
+
+.card:hover .card-content > :not(.card-title), .card:focus-within .card-content > :not(.card-title) {
+  opacity: 1;
+  transition: opacity .75s linear .75s;
+}
+
+p.card-body {
+  margin: 1rem 0;
+  font-weight: 300;
+}
+
+.mybutton {
+  cursor: pointer;
+  color: #202d3a;
+  background-color: #94d1be;
+  border-radius: .25em;
+  padding: .5em 1.25em;
+  text-decoration: none;
+  display: inline;
+}
+
+.mybutton:hover, .mybutton:focus {
+  background-color: #fff;
+}
+
 /*# sourceMappingURL=index.f7626f62.css.map */
