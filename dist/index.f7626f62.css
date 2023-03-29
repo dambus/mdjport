@@ -708,8 +708,11 @@ img.mobile-nav-items--logo {
 }
 
 .card {
+  background-blend-mode: darken;
   color: #fff;
+  max-height: 75vh;
   max-width: 50ch;
+  background-color: #202d3a4d;
   background-size: cover;
   border: none;
   border-radius: 1rem;
@@ -724,11 +727,14 @@ img.mobile-nav-items--logo {
 
 @media (min-width: 768px) {
   .card {
+    background-blend-mode: none;
+    background-color: #fff;
     margin-right: 3rem;
   }
 }
 
 .card-content {
+  min-height: 25rem;
   background: linear-gradient(#0000, #000000b3 30%, #000);
   padding: 1.5rem;
   transition: transform .5s;
@@ -811,7 +817,9 @@ img.mobile-nav-items--logo {
 }
 
 .card:hover, .card:focus-within {
-  transform: scale(1.02);
+  background-blend-mode: darken;
+  background-color: #202d3a66;
+  transform: scale(1.01);
 }
 
 .card:hover .card-title:after, .card:focus-within .card-title:after {
@@ -819,7 +827,7 @@ img.mobile-nav-items--logo {
 }
 
 .card:hover .card-content, .card:focus-within .card-content {
-  transition-duration: .2s;
+  transition-duration: .1s;
   transition-delay: .3s;
   transform: translateY(1%);
 }

@@ -9,7 +9,14 @@
 .card {
   flex-grow: 1;
   // margin: 0 auto;
+  background-color: rgba($gunmetal, 0.3);
+  background-blend-mode: darken;
+  @include md {
+    background-color: white;
+    background-blend-mode: none;
+  }
   color: $white;
+  max-height: 75vh;
   outline: none;
   border: none;
   margin-bottom: 3rem;
@@ -27,6 +34,7 @@
   transition: transform 500ms ease;
 
   &-content {
+    min-height: 25rem;
     $padding: 1.5rem;
     padding: $padding;
     background: linear-gradient(
@@ -104,14 +112,17 @@
 
   &:hover,
   &:focus-within {
-    transform: scale(1.02);
+    transform: scale(1.01);
+    background-color: rgba($gunmetal, 0.4);
+    background-blend-mode: darken;
+
     .card-title::after {
       transform: scaleX(1);
     }
     .card-content {
       transform: translatey(1%);
       transition-delay: 300ms;
-      transition-duration: 200ms;
+      transition-duration: 100ms;
       & > *:not(.card-title) {
         opacity: 1;
         transition: opacity 0.5s linear;
