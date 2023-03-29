@@ -1,11 +1,27 @@
+.cards {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .card {
+  flex-grow: 1;
+  // margin: 0 auto;
   color: $white;
   outline: none;
   border: none;
-  // background-image: url(/src/img/tigran-hambardzumyan-h1wOnkASqq4-unsplash.jpg);
+  margin-bottom: 3rem;
+  margin-right: 0;
+  @include md {
+    margin-right: 3rem;
+  }
+  // background-image: manually set in html style property
   background-size: cover;
   padding: 10rem 0 0;
-  max-width: 80ch;
+
+  max-width: 50ch;
   border-radius: 1rem;
   overflow: hidden;
   transition: transform 500ms ease;
@@ -26,6 +42,42 @@
     & > *:not(.card-title) {
       @media (hover) {
         opacity: 0;
+      }
+    }
+    &-icons {
+      margin-top: 2rem;
+      display: flex;
+      font-size: 2rem;
+      justify-content: center;
+      a {
+        margin-right: 1rem;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          transform: rotate(-2deg);
+          transform-origin: bottom middle;
+          // transition: transform 0.2s;
+          // transition-delay: 0.1s;
+          color: $tiffany-blue;
+          transition: 0.2s ease;
+        }
+      }
+    }
+    &-usedtech {
+      // margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      &--icon {
+        font-weight: 300;
+        font-size: 1.5rem;
+        @include md {
+          font-weight: 300;
+          font-size: 1.8rem;
+        }
+        margin-right: 0.66rem;
+        color: $tiffany-blue;
+        transform: rotate(-3deg);
       }
     }
   }
@@ -58,12 +110,12 @@
     }
     .card-content {
       transform: translatey(1%);
-      transition-delay: 500ms;
-      transition-duration: 0ms;
+      transition-delay: 300ms;
+      transition-duration: 200ms;
       & > *:not(.card-title) {
         opacity: 1;
-        transition: opacity 0.75s linear;
-        transition-delay: 0.75s;
+        transition: opacity 0.5s linear;
+        transition-delay: 0.5s;
       }
     }
   }
