@@ -1,16 +1,16 @@
 %btn {
   background-color: none;
-  color: $ash-gray;
+  color: $gunmetal;
   border: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
+  display: inline-block;
   transition: all 0.2s;
+  margin-right: 1rem;
 
   &:hover {
     // transform: scale(1.05);
     background: $light-cyan;
-    color: black;
+    color: $gunmetal;
   }
 
   &:focus {
@@ -38,7 +38,24 @@
 
     font-size: 1rem;
     font-weight: 400;
-    padding: 1.25rem 2.25rem;
+    padding: 1rem 2.25rem;
     text-decoration: none;
+    border-radius: 8px;
   }
+  &:hover {
+    transform: rotate(-2deg);
+    transition: transform 0.2s ease;
+    transition-delay: 0.1s;
+  }
+}
+
+.btn-row {
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  @include md {
+    justify-content: start;
+  }
+  align-items: center;
 }
