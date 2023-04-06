@@ -21,9 +21,6 @@ mobileNavItem.forEach(function (currentValue, currentIndex, listObj) {
 
 mobileMenuToggle.addEventListener("click", function () {
   mobileMenuToggle.classList.toggle("mob-active");
-  toggleCSSClasses(mobileNavItems, "hidden", "no-opacity");
-  // toggleCSSClasses([...mobileNavItem], "from-right");
-  // console.log(mobileNavItem);
   mobileNavItem.forEach(function (currentValue, currentIndex, listObj) {
     toggleCSSClasses(listObj[currentIndex], "no-opacity");
   });
@@ -48,12 +45,6 @@ const sections = document.querySelectorAll("section[id]");
 
 window.addEventListener("scroll", navHighlighter);
 // window.addEventListener("scroll", navBarChanger);
-
-function navBarChanger() {
-  // scrollY > navBarHeight ? (logo.widht = 100) : (logo.widht = 225);
-  // ? logo.classList.add("small")
-  // : logo.classList.remove("small");
-}
 
 function navHighlighter() {
   // Get current scroll position
