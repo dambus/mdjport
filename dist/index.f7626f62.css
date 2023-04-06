@@ -137,11 +137,18 @@ article {
 }
 
 .btn--small, .btn--small:link, .btn--small:visited {
-  border-radius: 8px;
-  padding: 1rem 2.25rem;
+  border-radius: 6px;
+  padding: .5rem .8125rem;
   font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .btn--small, .btn--small:link, .btn--small:visited {
+    border-radius: 8px;
+    padding: 1rem 2.25rem;
+  }
 }
 
 .btn--small:hover {

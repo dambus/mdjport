@@ -38,9 +38,14 @@
 
     font-size: 1rem;
     font-weight: 400;
-    padding: 1rem 2.25rem;
+    padding: 0.5rem 0.8125rem;
+    border-radius: 6px;
+    @include md {
+      padding: 1rem;
+      padding: 1rem 2.25rem;
+      border-radius: 8px;
+    }
     text-decoration: none;
-    border-radius: 8px;
   }
   &:hover {
     transform: rotate(-2deg);
