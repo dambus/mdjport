@@ -6,7 +6,7 @@
     "usedTech": ["html", "css", "bootstrap", "sass", "javascript"],
     "infoHandle": "",
     "link": "https://www.npi.rs",
-    "bgImage": "/src/img/projects/project_1.png"
+    "bgImage": "./src/img/projects/project_1.png"
   },
   {
     "id": "02",

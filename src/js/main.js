@@ -1,4 +1,5 @@
 "use strict";
+
 // const { entries } = require("lodash");
 
 const mobileMenuToggle = document.querySelector(".toggle-menu");
@@ -23,7 +24,7 @@ mobileMenuToggle.addEventListener("click", function () {
   mobileMenuToggle.classList.toggle("mob-active");
   toggleCSSClasses(mobileNavItems, "no-opacity", "hidden");
   mobileNavItem.forEach(function (currentValue, currentIndex, listObj) {
-    console.log(listObj[currentIndex]);
+    // console.log(listObj[currentIndex]);
     toggleCSSClasses(listObj[currentIndex], "no-opacity");
   });
 });
