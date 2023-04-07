@@ -1,7 +1,7 @@
 import data from "../json/projects.json";
 
 function populateProjects() {
-  parentElement = document.getElementById("projectCards");
+  const parentElement = document.getElementById("projectCards");
   let projectData = [...data];
   console.log(projectData);
 
