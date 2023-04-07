@@ -1,8 +1,7 @@
 import data from "../json/projects.json";
 
-parentElement = document.getElementById("projectCards");
-
 function populateProjects() {
+  parentElement = document.getElementById("projectCards");
   let projectData = [...data];
   console.log(projectData);
 
@@ -44,7 +43,7 @@ function populateProjects() {
             </div>
           </div>
           <!--card end-->`;
-    _parentElement.insertAdjacentHTML("afterbegin", markup);
+    parentElement.insertAdjacentHTML("afterbegin", markup);
   });
 }
 
