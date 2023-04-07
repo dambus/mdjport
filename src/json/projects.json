@@ -1,6 +1,6 @@
  [
   {
-    "id": "01",
+    "id": "1",
     "title": "Neopetrol Inzenjering",
     "description": "Company presentation, written from scratch. Implemented live search option for list of projects, company profile pdf on 4 languages available for viewing or download",
     "usedTech": ["html", "css", "bootstrap", "sass", "javascript"],
@@ -9,7 +9,16 @@
     "bgImage": "./src/img/projects/project_1.png"
   },
   {
-    "id": "02",
+    "id": "2",
+    "title": "My first portfolio",
+    "description": "My first portfolio. Done from the free template, heavily modified, but still credited. Made with lots of love.",
+    "usedTech": ["html", "css", "bootstrap", "sass", "javascript"],
+    "infoHandle": "",
+    "link": "https://dambus.github.io/myPortfolio/", 
+    "bgImage": "src/img/projects/project_2.png"
+  },
+  {
+    "id": "3",
     "title": "My first portfolio",
     "description": "My first portfolio. Done from the free template, heavily modified, but still credited. Made with lots of love.",
     "usedTech": ["html", "css", "bootstrap", "sass", "javascript"],
