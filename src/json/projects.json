@@ -1,0 +1,21 @@
+ [
+  {
+    "id": "01",
+    "title": "Neopetrol Inzenjering",
+    "description": "Company presentation, written from scratch. Implemented live search option for list of projects, company profile pdf on 4 languages available for viewing or download",
+    "usedTech": ["html", "css", "bootstrap", "sass", "javascript"],
+    "infoHandle": "",
+    "link": "https://www.npi.rs",
+    "bgImage": "/src/img/projects/project_1.png"
+  },
+  {
+    "id": "02",
+    "title": "My first portfolio",
+    "description": "My first portfolio. Done from the free template, heavily modified, but still credited. Made with lots of love.",
+    "usedTech": ["html", "css", "bootstrap", "sass", "javascript"],
+    "infoHandle": "",
+    "link": "https://dambus.github.io/myPortfolio/", 
+    "bgImage": "/src/img/projects/project_2.png"
+  }
+]
+  
